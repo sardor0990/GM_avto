@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+</head>
+<body>
+
+<div class="modal fade" id="edite">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="text-center text-muted">O'zgartirish</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="upName">Avto Nomi</label>
+                    <input type="text" class="form-control" placeholder="Avto nomini kiriting" id="upName">
+                </div>
+                <div class="form-group">
+                    <label for="upColor">Avto Rangi</label>
+                    <input type="text" class="form-control" placeholder="Avto rangini kiriting" id="upColor">
+                </div>
+                <input type="hidden" id="upId">
+                <div class="form-group">
+                    <label for="upPrice">Avto Narxi</label>
+                    <input type="text" class="form-control" placeholder="Avto narxi kiriting" id="upPrice">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Bekor qilish</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="saveCar()">Saqlash</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <h1 class="text-center">GM avro prom</h1>
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-md-4">
+            <label for="avtoName">Avto nomi</label>
+            <input type="text" class="form-control" placeholder="Avto nimini kiriting" id="avtoName">
+        </div>
+        <div class="col-md-4">
+            <label for="avtoColor">Avto rangi</label>
+            <input type="text" class="form-control" placeholder="Avto rangini kiriting" id="avtoColor">
+        </div>
+        <div class="col-md-4">
+            <label for="avtoPrice">Avto narxi</label>
+            <input type="text" class="form-control" placeholder="Avto narxini kiriting" id="avtoPrice">
+        </div>
+        <div class="col-md-4 offset-8 mt-4 text-right">
+            <button type="button" class="btn btn-success" onclick="addCar()">Saqlash</button>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="card col-md-12">
+            <div class="card-body">
+                <table class="table table-striped table-bordered" id="table">
+                    <thead>
+                    <tr>
+                        <th>T/R</th>
+                        <th>Avto nomi</th>
+                        <th>Avto rangi</th>
+                        <th>Avto narxi</th>
+                        <th>Amallar</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    <tr>
+                        <td colspan="5">
+                            <h1 class="text-center text-muted py-5">Avtokobillar mavjud emas!</h1>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4">Jami:</td>
+                        <th id="summa">0</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jQuery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
